@@ -6,9 +6,9 @@ The higher performance of Node.JS over Python has taught us that clean looking c
 
 Same data, different layouts
 ---
-You can layout your data in many different ways. In a blog engine, you could have a collection for users, a collection for posts, and a collection for comments. Or, you could have the comments in a subdocument with the user who posted it in the collection for 'users', leaving you with two collections. You could also use the 'user' collection for everything, where the user's documents contain all comments and articles as subdocuments. When should you use a seperate collection for a seperate type of data versus keeping it inside of a larger JSON document?
+You can layout your data in many different ways. In a blog engine, you could have a collection for users, a collection for posts, and a collection for comments. Or, you could have the comments in a subdocument with the user who posted it in the collection for 'users', leaving you with two collections. You could also use the 'user' collection for everything, where the user's documents contain all comments and articles as subdocuments. When should you use a separate collection for a separate type of data versus keeping it inside of a larger JSON document?
 
-Keeping data in their own seperate collection (or tables) when the data does not relate one-to-one is called normalizing. If every use must have one and only one username and email, then the password may go into the same JSON document (or table row) as the username in a normalized database. If the user can have more than one comment, the comments must go into the seperate collection from the username and email. Traditionally, relational databases have a normalized layout.
+Keeping data in their own separate collection (or tables) when the data does not relate one-to-one is called normalizing. If every use must have one and only one username and email, then the password may go into the same JSON document (or table row) as the username in a normalized database. If the user can have more than one comment, the comments must go into the separate collection from the username and email. Traditionally, relational databases have a normalized layout.
 With orchestrate, a normalized layout of this could look like
 ```javascript
 {
@@ -46,7 +46,7 @@ Unlike relational databases, Orchestrate can store data in subdocuments within d
 	"comments": {
 		"denormalization": {
 			"date": Date(),
-			"conent": "First Post!!"
+			"content": "First Post!!"
 		}
 	}
 }
@@ -55,6 +55,6 @@ Unlike relational databases, Orchestrate can store data in subdocuments within d
 Why Normalize
 ---
 
-Keeping data seperate does make the data more organized and easier to work with. If the two type of data will not be simulataneously queried, then keeping them in the same collection does not offer any perfromance benefit. In some other databases, you could not store small, unique pieces of data within a larger piece of data, though this is not the case with Orchestrate.
+Keeping data separate does make the data more organized and easier to work with. If the two type of data will not be simultaneously queried, then keeping them in the same collection does not offer any performance benefit. In some other databases, you could not store small, unique pieces of data within a larger piece of data, though this is not the case with Orchestrate.
 
-If you are migrating from a relational database like MySQL or Postgres, figure out how you will be querying your data with `JOIN` operations. You need to know what ways your application will query your data, and if keeping 1:n table relations makes sense for how your app will query your data. With properly planned queries, almost all relational data can fit into the scalable and acessable Orchestrate. 
+If you are migrating from a relational database like MySQL or Postgres, figure out how you will be querying your data with `JOIN` operations. You need to know what ways your application will query your data, and if keeping 1:n table relations makes sense for how your app will query your data. With properly planned queries, almost all relational data can fit into the scalable and accessible Orchestrate. 
