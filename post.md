@@ -29,7 +29,7 @@ with
 Why Denormalize?
 ---
 The opposite of normal
-![alt text](https://commons.wikimedia.org/wiki/File:Keep_Portland_Weird.jpg#mediaviewer/File:Keep_Portland_Weird.jpg "The opposite of normal")
+![alt text](https://raw.githubusercontent.com/evanroman/orchestrateblogpost/master/1024px-Keep_Portland_Weird.jpg "The opposite of normal")
 In a normalized database, retrieving data from multiple collection, like loading a user's profile that has their comments and their contact info, two queries must be made: one query for each collection
 ```bash
 curl -i "https://api.orchestrate.io/v0/users/tony" \
