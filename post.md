@@ -1,4 +1,4 @@
-Data Denormalization: Going from relational to orchestrate
+Data Denormalization: Going from relational to Orchestrate
 ====
 You may have just moved from Postgres to Orchestrate, and found your application doing several queries from multiple collections to load a single page. You may have your data organized neatly in different collections. 
 
