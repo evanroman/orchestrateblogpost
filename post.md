@@ -42,7 +42,7 @@ Unlike relational databases, Orchestrate can store data in subdocuments within d
 ```javascript
 {
 	"username": "tony",
-	"email: "tony@orchestrate.io",
+	"email": "tony@orchestrate.io",
 	"comments": {
 		"denormalization": {
 			"date": Date(),
