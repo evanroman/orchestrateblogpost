@@ -55,6 +55,6 @@ Unlike relational databases, Orchestrate can store data in subdocuments within d
 Why Normalize
 ---
 
-Keeping data separate does make the data more organized and easier to work with. If the two type of data will not be simultaneously queried, then keeping them in the same collection does not offer any performance benefit.
+Keeping data separate does make the data more organized and easier to work with. If the two types of data will not be simultaneously queried, then keeping them in the same collection does not offer any performance benefit.
 
 If you are migrating from a relational database like MySQL or Postgres, figure out how you will be querying your data without `JOIN` operations. You need to know what ways your application will query your data, and if keeping 1:n table/collection relations with shared keys makes sense for how your app will query your data in the abscence of `JOIN` operations. With queries planned in advance, almost all relational data can fit into and be used efficiently by the scalable and accessible Orchestrate. 
